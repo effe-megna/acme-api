@@ -17,3 +17,5 @@ app.get('/orders/:id', (c) => {
   const order = orders.find((o) => o.id === c.req.param('id'))
   return order ? c.json(order) : c.json({ error: 'not found' }, 404)
 })
+
+app.get('/version', (c) => c.json({ version: '0.1.0' }))
