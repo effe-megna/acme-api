@@ -1,4 +1,4 @@
 {
-  "unrelatedFailure": false,
+  "unrelatedFailure": true,
   "slowSeconds": 20
 }
