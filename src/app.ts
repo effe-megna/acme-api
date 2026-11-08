@@ -19,6 +19,6 @@ app.get('/orders/:id', (c) => {
 })
 
 app.get('/status', (c) => {
-  const count = orders.length
-  return c.json({ ok: true, orders: count })
+  const orderCount = orders.length
+  return c.json({ ok: true, orders: orderCount })
 })
