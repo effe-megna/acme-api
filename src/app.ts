@@ -17,3 +17,8 @@ app.get('/orders/:id', (c) => {
   const order = orders.find((o) => o.id === c.req.param('id'))
   return order ? c.json(order) : c.json({ error: 'not found' }, 404)
 })
+
+app.get('/status', (c) => {
+  const count = orders.length
+  return c.json({ ok: true, orders: count })
+})
